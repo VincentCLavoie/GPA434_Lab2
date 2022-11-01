@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Header Files\HouseSimulationPanel">
+      <UniqueIdentifier>{7c4f7ff0-6d4c-4dfe-ac5f-1e42adb5636f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\HouseSimulationPanel">
+      <UniqueIdentifier>{7dbde58b-7c8c-4af1-b329-10948d11343f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\EzHome">
+      <UniqueIdentifier>{c4d096b0-fe1b-4bce-bb04-50ac4e5fca75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EzHome">
+      <UniqueIdentifier>{32fdc788-2bec-427c-b149-e80671c8639b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="QSmartHouse.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtUic Include="QSmartHouse.ui">
+      <Filter>Resource Files</Filter>
+    </QtUic>
+    <QtMoc Include="QSmartHouse.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClCompile Include="QSmartHouse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QHouseSimulationControlPanel.cpp">
+      <Filter>Source Files\HouseSimulationPanel</Filter>
+    </ClCompile>
+    <ClCompile Include="QHouseSimulationDevicePanel.cpp">
+      <Filter>Source Files\HouseSimulationPanel</Filter>
+    </ClCompile>
+    <ClCompile Include="QHouseSimulationGlobalInformationPanel.cpp">
+      <Filter>Source Files\HouseSimulationPanel</Filter>
+    </ClCompile>
+    <ClCompile Include="QHouseSimulationHistoryGraphPanel.cpp">
+      <Filter>Source Files\HouseSimulationPanel</Filter>
+    </ClCompile>
+    <ClCompile Include="QHouseSimulationTemperaturePanel.cpp">
+      <Filter>Source Files\HouseSimulationPanel</Filter>
+    </ClCompile>
+    <ClCompile Include="QHouseSimulationVisualisationPanel.cpp">
+      <Filter>Source Files\HouseSimulationPanel</Filter>
+    </ClCompile>
+    <ClCompile Include="QColorBox.cpp">
+      <Filter>Source Files\HouseSimulationPanel</Filter>
+    </ClCompile>
+    <ClCompile Include="EzHomeSens200.cpp">
+      <Filter>Source Files\EzHome</Filter>
+    </ClCompile>
+    <ClCompile Include="EzHomeSens666.cpp">
+      <Filter>Source Files\EzHome</Filter>
+    </ClCompile>
+    <ClCompile Include="EzHomeThermal200.cpp">
+      <Filter>Source Files\EzHome</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="QHouseSimulationControlPanel.h">
+      <Filter>Header Files\HouseSimulationPanel</Filter>
+    </QtMoc>
+    <QtMoc Include="QHouseSimulationDevicePanel.h">
+      <Filter>Header Files\HouseSimulationPanel</Filter>
+    </QtMoc>
+    <QtMoc Include="QHouseSimulationGlobalInformationPanel.h">
+      <Filter>Header Files\HouseSimulationPanel</Filter>
+    </QtMoc>
+    <QtMoc Include="QHouseSimulationHistoryGraphPanel.h">
+      <Filter>Header Files\HouseSimulationPanel</Filter>
+    </QtMoc>
+    <QtMoc Include="QHouseSimulationTemperaturePanel.h">
+      <Filter>Header Files\HouseSimulationPanel</Filter>
+    </QtMoc>
+    <QtMoc Include="QColorBox.h">
+      <Filter>Header Files\HouseSimulationPanel</Filter>
+    </QtMoc>
+    <QtMoc Include="EzHomeSens200.h">
+      <Filter>Header Files\EzHome</Filter>
+    </QtMoc>
+    <QtMoc Include="EzHomeSens666.h">
+      <Filter>Header Files\EzHome</Filter>
+    </QtMoc>
+    <QtMoc Include="EzHomeThermal200.h">
+      <Filter>Header Files\EzHome</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="QHouseSimulationVisualisationPanel.h">
+      <Filter>Header Files\HouseSimulationPanel</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

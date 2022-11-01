@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/QSmartHouse">
+        <file alias="HouseIcon">HouseIcon.png</file>
+    </qresource>
+</RCC>
