@@ -64,7 +64,7 @@ public:
 
     QImage toImage(QSize const & size, Qt::Orientation orientation = Qt::Vertical) const;
 
-    static QColorMap default();
+    static QColorMap default_();
     static QColorMap heat();
     //static ColorMap electricBlue();
     //static ColorMap hot();

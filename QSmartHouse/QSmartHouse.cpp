@@ -14,5 +14,5 @@ QSmartHouse::QSmartHouse(QWidget *parent)
     setWindowIcon(QIcon(":/QSmartHouse/HouseIcon"));
 
     // Vote code doit suivre ---v---
-
+    
 }
