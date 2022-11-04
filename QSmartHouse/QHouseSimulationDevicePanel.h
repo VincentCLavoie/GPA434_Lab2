@@ -17,6 +17,7 @@ public:
 
 	size_t deviceCount() const;
 	void addDevice(HouseDevice * device);
+	//$void ConnectionCapteurs(QHouseSimulationDevicePanel val1, QHouseSimulationVisualisationPanel val2);
 
 signals:
 	void deviceChanged(int id);

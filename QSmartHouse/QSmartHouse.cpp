@@ -59,8 +59,9 @@ QSmartHouse::QSmartHouse(QWidget* parent)
     // 3.1) Ajouter le contrôle des sources de
     // chauffage/refroidissement et des capteurs de
     // température.
-    // 3.2) Ajouter une élongation (stretch). Voir page
-    // 7 du cahier de laboratoire
+    deviceLayout->addWidget(mHouseSimDevicePanel);
+    // 3.2) Ajouter une élongation (stretch). Voir page 7 du cahier de laboratoire
+    deviceLayout->addStretch();
     // 3.3) Ajouter le bouton "À propos"
     QPushButton* about{ new QPushButton("À propos...") };
     deviceLayout->addWidget(about);
@@ -81,4 +82,67 @@ QSmartHouse::QSmartHouse(QWidget* parent)
     //QHouseSimulationTemperature Panel
     mHouseSimTempPanel->add(new TypicalMontrealAnnualWeather);
     mHouseSimTempPanel->add(new ExtremeAnnualWeather);
+
+    //Capteurs
+    EzHomeSens200* kitchen200{ new EzHomeSens200(mHouse) };
+    kitchen200->setUserName("Cuisine");
+    kitchen200->setPosition(QPoint(10, 15)); // position x,y dans la cuisine
+    mHouseSimDevicePanel->addDevice(kitchen200);
+
+    EzHomeSens200* Salon200{ new EzHomeSens200(mHouse) };
+    Salon200->setUserName("Salon");
+    Salon200->setPosition(QPoint(10, 60)); // position x,y dans du salon
+    mHouseSimDevicePanel->addDevice(Salon200);
+
+    EzHomeSens666* ChambreMaudite666{ new EzHomeSens666(mHouse) };
+    ChambreMaudite666->setUserName("Chambre Maudite");
+    ChambreMaudite666->setPosition(QPoint(120, 60)); // position x,y dans la chambre maudite
+    mHouseSimDevicePanel->addDevice(ChambreMaudite666);
+
+    EzHomeSens666* ChambreHantee666{ new EzHomeSens666(mHouse) };
+    ChambreHantee666->setUserName("Chambre Hantée");
+    ChambreHantee666->setPosition(QPoint(80, 60)); // position x,y dans la chambre hantée
+    mHouseSimDevicePanel->addDevice(ChambreHantee666);
+
+    EzHomeThermal200* PiecePrincipale200{ new EzHomeThermal200(mHouse) };
+    PiecePrincipale200->setUserName("Pièce Principale");
+    PiecePrincipale200->setPosition(QPoint(10, 35)); // position x,y de la pièce principale
+    mHouseSimDevicePanel->addDevice(PiecePrincipale200);
+
+    EzHomeThermal200* Chambre1{ new EzHomeThermal200(mHouse) };
+    Chambre1->setUserName("Chambre 1");
+    Chambre1->setPosition(QPoint(75, 15)); // position x,y de la chambre 1
+    mHouseSimDevicePanel->addDevice(PiecePrincipale200);
+
+    EzHomeThermal200* Chambre2{ new EzHomeThermal200(mHouse) };
+    Chambre2->setUserName("Chambre 2");
+    Chambre2->setPosition(QPoint(125, 15)); // position x,y de la chambre 2
+    mHouseSimDevicePanel->addDevice(Chambre2);
+
+    
+    // Pour mettre à jour le plan de la maison ou la carte de chaleur
+    // (premier widget au centre du GUI) à chaque pas de simulation.
+    connect(mHouseSimCtrlPanel, &QHouseSimulationControlPanel::simulationTicked,
+        mHouseSimVisualisationPanel, &QHouseSimulationVisualisationPanel::updateView);
+    // Pour mettre à jour l'historique de la température (deuxième widget au centre
+    // du GUI) à chaque pas de simulation.
+    connect(mHouseSimCtrlPanel, &QHouseSimulationControlPanel::simulationTicked,
+        mHouseSimHistoryGraphPanel, &QHouseSimulationHistoryGraphPanel::updateGraph);
+    //$AJOUTER LES COMMENTAIRES
+    connect(mHouseSimCtrlPanel, &QHouseSimulationControlPanel::simulationTicked,
+        mHouseSimGlobalInfoPanel, &QHouseSimulationGlobalInformationPanel::updateInfo);
+
+    connect(mHouseSimCtrlPanel, &QHouseSimulationControlPanel::simulationTicked,
+        mHouseSimDevicePanel, &QHouseSimulationDevicePanel::updateDevice);
+
+    connect(mHouseSimCtrlPanel, &QHouseSimulationControlPanel::simulationReset,
+        mHouseSimHistoryGraphPanel, &QHouseSimulationHistoryGraphPanel::resetGraph);
+
+    connect(mHouseSimDevicePanel, &QHouseSimulationDevicePanel::deviceChanged,
+        mHouseSimVisualisationPanel, &QHouseSimulationVisualisationPanel::setDeviceId);
+    
+
+    //Dispositif
+    mHouseSimVisualisationPanel->setDeviceId(0);
+    mHouseSimVisualisationPanel->updateView();
 }

@@ -1,4 +1,5 @@
 #include "QHouseSimulationDevicePanel.h"
+#include "QHouseSimulationVisualisationPanel.h" //$
 
 
 #include <QGridLayout>
@@ -52,3 +53,9 @@ void QHouseSimulationDevicePanel::addDevice(HouseDevice * device)
         mDeviceStackedWidget->addWidget(device->createHMI());
     }
 }
+/*$
+void QHouseSimulationDevicePanel::ConnectionCapteurs(QHouseSimulationDevicePanel val1, QHouseSimulationVisualisationPanel val2)
+{
+    connect(val1, deviceChanged, val2);
+}
+*/

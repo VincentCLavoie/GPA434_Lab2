@@ -23,6 +23,11 @@
 #include <ExtremeAnnualWeather.h>
 #include <TypicalMontrealAnnualWeather.h>
 
+//Capteurs
+#include "EzHomeSens200.h"
+#include "EzHomeSens666.h"
+#include "EzHomeThermal200.h"
+
 class QSmartHouse : public QMainWindow
 {
     Q_OBJECT
@@ -41,7 +46,6 @@ private:
     QHouseSimulationHistoryGraphPanel* mHouseSimHistoryGraphPanel;
     QHouseSimulationTemperaturePanel* mHouseSimTempPanel;
     QHouseSimulationVisualisationPanel* mHouseSimVisualisationPanel;
-
     
     
     
