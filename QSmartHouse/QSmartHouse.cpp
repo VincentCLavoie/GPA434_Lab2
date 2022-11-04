@@ -76,4 +76,9 @@ QSmartHouse::QSmartHouse(QWidget* parent)
     centralWidget->setLayout(centralLayout);
     // 4.3) Insérer le widget principal dans la fenêtre
     setCentralWidget(centralWidget);
+
+
+    //QHouseSimulationTemperature Panel
+    mHouseSimTempPanel->add(new TypicalMontrealAnnualWeather);
+    mHouseSimTempPanel->add(new ExtremeAnnualWeather);
 }

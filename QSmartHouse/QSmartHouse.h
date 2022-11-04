@@ -18,6 +18,11 @@
 #include <qwidget.h>
 #include <qlayout.h>
 
+//QHouseSimulationTemperaturePanel
+#include <AnnualWeather.h>
+#include <ExtremeAnnualWeather.h>
+#include <TypicalMontrealAnnualWeather.h>
+
 class QSmartHouse : public QMainWindow
 {
     Q_OBJECT
