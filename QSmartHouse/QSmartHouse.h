@@ -23,6 +23,9 @@
 #include <ExtremeAnnualWeather.h>
 #include <TypicalMontrealAnnualWeather.h>
 
+#include "CustomAnnualWeather.h"
+
+
 //Capteurs
 #include "EzHomeSens200.h"
 #include "EzHomeSens666.h"

@@ -111,6 +111,7 @@
     <QtRcc Include="QSmartHouse.qrc" />
     <QtUic Include="QSmartHouse.ui" />
     <QtMoc Include="QSmartHouse.h" />
+    <ClCompile Include="CustomAnnualWeather.cpp" />
     <ClCompile Include="EzHomeSens200.cpp" />
     <ClCompile Include="EzHomeSens666.cpp" />
     <ClCompile Include="EzHomeThermal200.cpp" />
@@ -152,6 +153,7 @@
     <QtMoc Include="QHouseSimulationTemperaturePanel.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CustomAnnualWeather.h" />
     <ClInclude Include="QHouseSimulationVisualisationPanel.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

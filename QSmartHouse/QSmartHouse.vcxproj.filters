@@ -83,6 +83,9 @@
     <ClCompile Include="EzHomeThermal200.cpp">
       <Filter>Source Files\EzHome</Filter>
     </ClCompile>
+    <ClCompile Include="CustomAnnualWeather.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QHouseSimulationControlPanel.h">
@@ -116,6 +119,9 @@
   <ItemGroup>
     <ClInclude Include="QHouseSimulationVisualisationPanel.h">
       <Filter>Header Files\HouseSimulationPanel</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomAnnualWeather.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

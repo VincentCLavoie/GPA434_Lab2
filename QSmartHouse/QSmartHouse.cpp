@@ -82,6 +82,7 @@ QSmartHouse::QSmartHouse(QWidget* parent)
     //QHouseSimulationTemperature Panel
     mHouseSimTempPanel->add(new TypicalMontrealAnnualWeather);
     mHouseSimTempPanel->add(new ExtremeAnnualWeather);
+    mHouseSimTempPanel->add(new CustomAnnualWeather);
 
     //Capteurs
     EzHomeSens200* kitchen200{ new EzHomeSens200(mHouse) };
@@ -141,7 +142,7 @@ QSmartHouse::QSmartHouse(QWidget* parent)
     connect(mHouseSimDevicePanel, &QHouseSimulationDevicePanel::deviceChanged,
         mHouseSimVisualisationPanel, &QHouseSimulationVisualisationPanel::setDeviceId);
     
-
+    
     //Dispositif
     mHouseSimVisualisationPanel->setDeviceId(0);
     mHouseSimVisualisationPanel->updateView();
