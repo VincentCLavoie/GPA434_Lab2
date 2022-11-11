@@ -8,7 +8,8 @@ QSmartHouse::QSmartHouse(QWidget* parent)
     mHouseSimGlobalInfoPanel{ new QHouseSimulationGlobalInformationPanel(mHouse) },
     mHouseSimHistoryGraphPanel{ new QHouseSimulationHistoryGraphPanel(mHouse) },
     mHouseSimTempPanel{ new QHouseSimulationTemperaturePanel(mHouse) },
-    mHouseSimVisualisationPanel{ new QHouseSimulationVisualisationPanel(mHouse) }
+    mHouseSimVisualisationPanel{ new QHouseSimulationVisualisationPanel(mHouse) },
+    mPushButton()
 {
     // Initialise l'interface initiale
     ui.setupUi(this);
@@ -65,6 +66,7 @@ QSmartHouse::QSmartHouse(QWidget* parent)
     // 3.3) Ajouter le bouton "À propos"
     QPushButton* about{ new QPushButton("À propos...") };
     deviceLayout->addWidget(about);
+    
 
 
     QWidget* centralWidget{ new QWidget };

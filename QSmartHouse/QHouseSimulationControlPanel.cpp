@@ -12,7 +12,9 @@ QHouseSimulationControlPanel::QHouseSimulationControlPanel(QHouseMap & houseMap,
         mCurrentStateColorBox{ new QColorBox(QColor(255, 0, 0)) },
         mSpeedScrollBar{ new QScrollBar },
         mSpeedTitleLabel{ new QLabel("Vitesse") },
-        mSpeedValueLabel{ new QLabel("1x") }
+        mSpeedValueLabel{ new QLabel("1x") },
+        mAPropos(),
+        mMessage()
 {
     mCurrentStateColorBox->setFixedHeight(4);
 
@@ -50,6 +52,7 @@ QHouseSimulationControlPanel::QHouseSimulationControlPanel(QHouseMap & houseMap,
     connect(mResetButton, &QPushButton::clicked, this, &QHouseSimulationControlPanel::resetSimulation);
     connect(mSpeedScrollBar, &QScrollBar::valueChanged, this, &QHouseSimulationControlPanel::updateSimulationSpeed);
     connect(&mSimulationTimer, &QTimer::timeout, this, &QHouseSimulationControlPanel::simulationTic);
+    connect(mAPropos, &QPushButton::clicked, this, &QHouseSimulationControlPanel::afficheAPropos);
 }
 
 QHouseSimulationControlPanel::~QHouseSimulationControlPanel()
@@ -128,3 +131,7 @@ void QHouseSimulationControlPanel::simulationTic()
     emit simulationTicked(timeStepCount);
 }
 
+void QHouseSimulationControlPanel::afficheAPropos()
+{
+    mMessage->about(this, "À propos...", "Smart House\n\nGPA434 | Laboratoire 2 d'ingénierie des systèmes orienté objet\n\nRéalisé par :\n- Vincent Lavoie\n- Liliam Acosta\n- Russel Bulaon\n\nCe laboratoire permet de visualiser les effets de trois simulations météorologiques distinctes sur une maison et les différentes pièces présentes dans la maison.\n\nLes ajouts réalisés sont les suivants:\n- Météo annuelle environnementale:\n");
+}

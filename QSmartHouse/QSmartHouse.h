@@ -2,6 +2,7 @@
 
 #include <QHouseMap.h>
 #include <qsplitter.h>
+#include <qmessagebox.h>
 
 #include <QtWidgets/QMainWindow>
 #include "ui_QSmartHouse.h"
@@ -49,6 +50,8 @@ private:
     QHouseSimulationHistoryGraphPanel* mHouseSimHistoryGraphPanel;
     QHouseSimulationTemperaturePanel* mHouseSimTempPanel;
     QHouseSimulationVisualisationPanel* mHouseSimVisualisationPanel;
+
+    QPushButton* mPushButton;
     
     
     

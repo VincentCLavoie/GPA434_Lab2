@@ -6,6 +6,8 @@
 #include <QLabel>
 #include <QScrollBar>
 #include "QColorBox.h"
+#include <QMessageBox.h>
+#include <Qwidget.h>
 
 #include <QHouseMap.h>
 #include <QTimer>
@@ -26,6 +28,7 @@ public slots:
     void startSimulation();
     void stopSimulation();
     void resetSimulation();
+    void afficheAPropos();
 
 signals:
     void simulationStarted();
@@ -43,6 +46,8 @@ private:
     QLabel * mSpeedValueLabel;
 
     QTimer mSimulationTimer;
+    QPushButton* mAPropos; 
+    QMessageBox* mMessage;
 
     void updateGui();
 
