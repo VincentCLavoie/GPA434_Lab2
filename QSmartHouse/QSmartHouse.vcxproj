@@ -115,6 +115,7 @@
     <ClCompile Include="EzHomeSens200.cpp" />
     <ClCompile Include="EzHomeSens666.cpp" />
     <ClCompile Include="EzHomeThermal200.cpp" />
+    <ClCompile Include="HouseDevice.cpp" />
     <ClCompile Include="QColorBox.cpp" />
     <ClCompile Include="QHouseSimulationControlPanel.cpp" />
     <ClCompile Include="QHouseSimulationDevicePanel.cpp" />
@@ -154,6 +155,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CustomAnnualWeather.h" />
+    <ClInclude Include="HouseDevice.h" />
     <ClInclude Include="QHouseSimulationVisualisationPanel.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

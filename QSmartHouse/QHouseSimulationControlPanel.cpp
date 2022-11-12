@@ -133,5 +133,7 @@ void QHouseSimulationControlPanel::simulationTic()
 
 void QHouseSimulationControlPanel::afficheAPropos()
 {
-    mMessage->about(this, "À propos...", "Smart House\n\nGPA434 | Laboratoire 2 d'ingénierie des systèmes orienté objet\n\nRéalisé par :\n- Vincent Lavoie\n- Liliam Acosta\n- Russel Bulaon\n\nCe laboratoire permet de visualiser les effets de trois simulations météorologiques distinctes sur une maison et les différentes pièces présentes dans la maison.\n\nLes ajouts réalisés sont les suivants:\n- Météo annuelle environnementale:\n");
+   mMessage->about(this, "À propos...", "Smart House\n\nGPA434 | Laboratoire 2 d'ingénierie des systèmes orienté objet\n\nRéalisé par :\n- Vincent Lavoie\n- Liliam Acosta\n- Russel Bulaon\n\nCe laboratoire permet de visualiser les effets de trois simulations météorologiques distinctes sur une maison et les différentes pièces présentes dans la maison.\n\nLes ajouts réalisés sont les suivants:\n- Météo annuelle environnementale:\n");
+   // QMessageBox::about(this, "À propos...", "Smart House\n\nGPA434 | Laboratoire 2 d'ingénierie des systèmes orienté objet\n\nRéalisé par :\n- Vincent Lavoie\n- Liliam Acosta\n- Russel Bulaon\n\nCe laboratoire permet de visualiser les effets de trois simulations météorologiques distinctes sur une maison et les différentes pièces présentes dans la maison.\n\nLes ajouts réalisés sont les suivants:\n- Météo annuelle environnementale:\n");
+
 }
